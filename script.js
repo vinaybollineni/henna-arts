@@ -82,49 +82,65 @@ filterButtons.forEach(button => {
     });
 });
 
-// Contact form handling
+// Contact form handling with Formspree
 const contactForm = document.getElementById('contact-form');
 const formMessage = document.getElementById('form-message');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
     // Get form values
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        service: document.getElementById('service').value,
-        message: document.getElementById('message').value
-    };
+    const formData = new FormData(contactForm);
     
     // Simple validation
-    if (!formData.name || !formData.email || !formData.phone || !formData.service || !formData.message) {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value;
+    
+    if (!name || !email || !phone || !service || !message) {
         showFormMessage('Please fill in all fields.', 'error');
         return;
     }
     
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
+    if (!emailRegex.test(email)) {
         showFormMessage('Please enter a valid email address.', 'error');
         return;
     }
     
-    // In a real application, you would send this data to a server
-    // For now, we'll just show a success message
-    console.log('Form submitted:', formData);
+    // Show sending message
+    showFormMessage('Sending your message...', 'info');
     
-    // Show success message
-    showFormMessage('Thank you for your message! We will get back to you soon.', 'success');
-    
-    // Reset form
-    contactForm.reset();
-    
-    // Reset labels (for floating label effect)
-    setTimeout(() => {
-        formMessage.style.display = 'none';
-    }, 5000);
+    try {
+        // Send form data to Formspree
+        const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            // Show success message
+            showFormMessage('Thank you for your message! We will get back to you soon.', 'success');
+            // Reset form
+            contactForm.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        } else {
+            showFormMessage('Oops! There was a problem submitting your form. Please try again.', 'error');
+        }
+    } catch (error) {
+        console.error('Form submission error:', error);
+        showFormMessage('Oops! There was a problem submitting your form. Please email us directly at meghnahennaart@gmail.com', 'error');
+    }
 });
 
 function showFormMessage(message, type) {
