@@ -6,10 +6,10 @@ A beautiful, modern, and responsive website for Meghna's Henna Art business in A
 
 - **Responsive Design**: Works beautifully on all devices (desktop, tablet, mobile)
 - **Modern UI/UX**: Clean, elegant design with smooth animations
-- **Interactive Gallery**: Filterable gallery to showcase henna designs
+- **Interactive Gallery**: Filterable gallery to showcase henna designs (23 real photos!)
 - **Service Showcase**: Detailed sections for bridal, party, prenatal, and custom henna
-- **Contact Form**: Easy-to-use contact form for booking inquiries
-- **Social Media Integration**: Links to social media profiles
+- **Working Contact Form**: Form submissions sent directly to email via Formspree
+- **Social Media Integration**: Direct links to Instagram and WhatsApp
 - **SEO Optimized**: Meta tags and semantic HTML for better search engine visibility
 
 ## 🚀 Live Website
