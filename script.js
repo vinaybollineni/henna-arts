@@ -82,65 +82,40 @@ filterButtons.forEach(button => {
     });
 });
 
-// Contact form handling with Formspree
+// Contact form handling with FormSubmit
 const contactForm = document.getElementById('contact-form');
 const formMessage = document.getElementById('form-message');
 
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
+// Client-side validation before form submission
+contactForm.addEventListener('submit', (e) => {
     // Get form values
-    const formData = new FormData(contactForm);
-    
-    // Simple validation
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
     const service = document.getElementById('service').value;
     const message = document.getElementById('message').value;
     
+    // Simple validation
     if (!name || !email || !phone || !service || !message) {
+        e.preventDefault();
         showFormMessage('Please fill in all fields.', 'error');
-        return;
+        return false;
     }
     
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
+        e.preventDefault();
         showFormMessage('Please enter a valid email address.', 'error');
-        return;
+        return false;
     }
     
     // Show sending message
-    showFormMessage('Sending your message...', 'info');
+    showFormMessage('Sending your message... Please wait.', 'info');
     
-    try {
-        // Send form data to Formspree
-        const response = await fetch(contactForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        
-        if (response.ok) {
-            // Show success message
-            showFormMessage('Thank you for your message! We will get back to you soon.', 'success');
-            // Reset form
-            contactForm.reset();
-            
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 5000);
-        } else {
-            showFormMessage('Oops! There was a problem submitting your form. Please try again.', 'error');
-        }
-    } catch (error) {
-        console.error('Form submission error:', error);
-        showFormMessage('Oops! There was a problem submitting your form. Please email us directly at meghnahennaart@gmail.com', 'error');
-    }
+    // Form will submit naturally to FormSubmit
+    // FormSubmit will handle the redirect and email sending
+    return true;
 });
 
 function showFormMessage(message, type) {
