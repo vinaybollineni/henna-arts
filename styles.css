@@ -452,6 +452,145 @@ section {
     font-weight: bold;
 }
 
+/* Homemade Henna Section */
+.homemade-henna {
+    background: var(--white);
+}
+
+.homemade-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.homemade-image {
+    position: relative;
+    position: sticky;
+    top: 100px;
+}
+
+.henna-image-placeholder {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 20px;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 20px 40px var(--shadow-dark);
+}
+
+.henna-image-placeholder i {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+.henna-image-placeholder p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.henna-image-placeholder small {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.homemade-text h3 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.homemade-text > p {
+    color: var(--gray);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.henna-benefits {
+    display: grid;
+    gap: 25px;
+    margin-bottom: 3rem;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    background: var(--light-gray);
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.benefit-item:hover {
+    background: var(--light-color);
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.benefit-content h4 {
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.benefit-content p {
+    color: var(--gray);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.henna-quote {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    padding: 30px 40px;
+    border-radius: 15px;
+    color: var(--white);
+    position: relative;
+    margin-top: 2rem;
+}
+
+.henna-quote i {
+    font-size: 2rem;
+    opacity: 0.5;
+    margin-bottom: 1rem;
+}
+
+.henna-quote p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.henna-quote span {
+    font-weight: 600;
+    font-size: 1rem;
+    display: block;
+    text-align: right;
+}
+
 /* Gallery Section */
 .gallery {
     background: var(--light-gray);
@@ -918,9 +1057,15 @@ section {
     }
     
     .about-content,
-    .contact-content {
+    .contact-content,
+    .homemade-content {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+    
+    .homemade-image {
+        position: relative;
+        top: 0;
     }
     
     .about-features {
