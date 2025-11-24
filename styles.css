@@ -470,6 +470,19 @@ section {
     top: 100px;
 }
 
+.henna-featured-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px var(--shadow-dark);
+    transition: var(--transition);
+}
+
+.henna-featured-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 50px var(--shadow-dark);
+}
+
 .henna-image-placeholder {
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     border-radius: 20px;
