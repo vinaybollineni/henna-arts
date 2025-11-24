@@ -489,6 +489,8 @@ section {
     align-items: center;
     justify-content: center;
     color: var(--white);
+    padding: 20px;
+    text-align: center;
 }
 
 .gallery-placeholder i {
@@ -498,6 +500,25 @@ section {
 
 .gallery-placeholder p {
     font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.gallery-placeholder small {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Styles for actual gallery images */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
 }
 
 /* Testimonials Section */
