@@ -66,6 +66,18 @@ body {
     align-items: center;
 }
 
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-logo .logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
 .nav-logo h1 {
     font-family: var(--font-primary);
     color: var(--primary-color);
@@ -305,6 +317,16 @@ section {
 
 .about-image {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-logo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px var(--shadow-dark);
 }
 
 .image-placeholder {
@@ -842,6 +864,14 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-logo .logo-img {
+        height: 40px;
+    }
+    
+    .nav-logo h1 {
+        font-size: 1.2rem;
+    }
+    
     .nav-menu {
         position: fixed;
         top: 80px;
@@ -906,6 +936,18 @@ section {
 }
 
 @media (max-width: 480px) {
+    .nav-logo {
+        gap: 10px;
+    }
+    
+    .nav-logo .logo-img {
+        height: 35px;
+    }
+    
+    .nav-logo h1 {
+        font-size: 1rem;
+    }
+    
     .hero-title {
         font-size: 2rem;
     }
