@@ -1,6 +1,6 @@
 # Meghna's Henna Art Website 🎨
 
-A beautiful, modern, and responsive website for Meghna's Henna Art business in Cerritos, California.
+A beautiful, modern, and responsive website for Meghna's Henna Art business in Austin, Texas.
 
 ## 🌟 Features
 
@@ -114,8 +114,9 @@ To run locally:
 
 ## 📞 Contact Information
 
-- **Location**: Cerritos, California
-- **Email**: info@meghnashennaart.com
+- **Location**: Austin, TX
+- **Phone**: (512) 931-4998
+- **Email**: meghnahennaart@gmail.com
 - **Website**: https://vinaybollineni.github.io/henna-arts/
 
 ## 📄 License
