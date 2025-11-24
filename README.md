@@ -1,6 +1,6 @@
 # Meghna's Henna Art Website 🎨
 
-A beautiful, modern, and responsive website for Meghna's Henna Art business in Austin, Texas.
+A beautiful, modern, and responsive website for Meghna's Henna Art business serving Liberty Hill, Leander, Georgetown, Round Rock, Austin and surrounding areas in Texas.
 
 ## 🌟 Features
 
@@ -114,7 +114,7 @@ To run locally:
 
 ## 📞 Contact Information
 
-- **Location**: Austin, TX
+- **Service Area**: Liberty Hill, Leander, Georgetown, Round Rock, Austin & Surrounding Areas
 - **Phone**: (512) 931-4998
 - **Email**: meghnahennaart@gmail.com
 - **Website**: https://vinaybollineni.github.io/henna-arts/
