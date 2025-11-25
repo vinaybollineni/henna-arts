@@ -153,8 +153,8 @@ scrollTopBtn.addEventListener('click', () => {
 
 // Animate elements on scroll
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
+    threshold: 0.05,
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -166,24 +166,34 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all sections and cards
-document.querySelectorAll('section, .service-card, .gallery-item, .testimonial-card').forEach(el => {
+// Observe sections and cards (but NOT gallery items - they need to be always visible)
+document.querySelectorAll('section, .service-card, .testimonial-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
 
-// Add hover effect for gallery items
-galleryItems.forEach(item => {
-    item.addEventListener('mouseenter', function() {
-        this.style.transform = 'scale(1.05) translateY(-5px)';
-    });
-    
-    item.addEventListener('mouseleave', function() {
-        this.style.transform = 'scale(1) translateY(0)';
-    });
+// Make sure gallery items are always visible and not affected by observer
+document.querySelectorAll('.gallery-item').forEach(el => {
+    el.style.opacity = '1';
+    el.style.transform = 'translateY(0)';
+    el.style.visibility = 'visible';
+    el.style.display = 'block';
 });
+
+// Add hover effect for gallery items (desktop only)
+if (window.innerWidth > 768) {
+    galleryItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05) translateY(-5px)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1) translateY(0)';
+        });
+    });
+}
 
 // Testimonials auto-scroll (optional enhancement)
 const testimonialCards = document.querySelectorAll('.testimonial-card');
