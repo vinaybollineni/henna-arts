@@ -62,6 +62,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const filterButtons = document.querySelectorAll('.filter-btn');
 const galleryItems = document.querySelectorAll('.gallery-item');
 
+// Initialize all gallery items as visible
+galleryItems.forEach(item => {
+    item.style.display = '';
+    item.classList.add('gallery-visible');
+});
+
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
         // Remove active class from all buttons
@@ -73,10 +79,13 @@ filterButtons.forEach(button => {
         
         galleryItems.forEach(item => {
             if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                item.style.display = 'block';
-                item.style.animation = 'fadeIn 0.5s ease';
+                item.style.display = '';
+                item.classList.add('gallery-visible');
+                item.classList.remove('gallery-hidden');
             } else {
                 item.style.display = 'none';
+                item.classList.remove('gallery-visible');
+                item.classList.add('gallery-hidden');
             }
         });
     });
