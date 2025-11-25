@@ -174,13 +174,34 @@ document.querySelectorAll('section, .service-card, .testimonial-card').forEach(e
     observer.observe(el);
 });
 
-// Make sure gallery items are always visible and not affected by observer
-document.querySelectorAll('.gallery-item').forEach(el => {
+// Force gallery items to be visible - NO EXCEPTIONS
+document.querySelectorAll('.gallery-item').forEach((el, index) => {
     el.style.opacity = '1';
     el.style.transform = 'translateY(0)';
     el.style.visibility = 'visible';
     el.style.display = 'block';
+    el.style.position = 'relative';
+    el.style.zIndex = '1';
+    console.log(`Gallery item ${index + 1} initialized:`, el);
 });
+
+// Force gallery section visible
+const gallerySection = document.getElementById('gallery');
+if (gallerySection) {
+    gallerySection.style.opacity = '1';
+    gallerySection.style.visibility = 'visible';
+    gallerySection.style.display = 'block';
+    console.log('Gallery section forced visible');
+}
+
+// Force gallery-grid visible
+const galleryGrid = document.querySelector('.gallery-grid');
+if (galleryGrid) {
+    galleryGrid.style.opacity = '1';
+    galleryGrid.style.visibility = 'visible';
+    galleryGrid.style.display = 'grid';
+    console.log('Gallery grid forced visible');
+}
 
 // Add hover effect for gallery items (desktop only)
 if (window.innerWidth > 768) {

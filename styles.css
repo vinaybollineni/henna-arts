@@ -680,6 +680,9 @@ section {
 /* Gallery Section */
 .gallery {
     background: var(--light-gray);
+    min-height: 500px;
+    display: block !important;
+    visibility: visible !important;
 }
 
 .gallery-filters {
@@ -708,9 +711,11 @@ section {
 }
 
 .gallery-grid {
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .gallery-item {
@@ -720,8 +725,9 @@ section {
     box-shadow: 0 5px 20px var(--shadow);
     transition: var(--transition);
     aspect-ratio: 1;
-    display: block;
-    visibility: visible;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .gallery-item.gallery-hidden {
@@ -730,6 +736,8 @@ section {
 
 .gallery-item.gallery-visible {
     display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .gallery-item:hover {
@@ -1241,10 +1249,18 @@ section {
         line-height: 1.5;
     }
     
+    .gallery {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
     .gallery-grid {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
         display: grid !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .gallery-item {
@@ -1253,6 +1269,7 @@ section {
         visibility: visible !important;
         opacity: 1 !important;
         min-height: 250px;
+        position: relative !important;
     }
     
     .gallery-item img {
@@ -1261,6 +1278,8 @@ section {
         height: auto !important;
         min-height: 250px;
         object-fit: cover;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .hero-buttons {
