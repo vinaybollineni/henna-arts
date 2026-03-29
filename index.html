@@ -9,81 +9,141 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
+            <a href="#home" class="nav-brand">
                 <img src="images/gallery/Pic25.png" alt="Meghna's Henna Art Logo" class="logo-img">
-                <h1>Meghna's Henna Art</h1>
-            </div>
+                <span class="nav-brand-name">Meghna's Henna Art</span>
+            </a>
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#services" class="nav-link">Services</a>
-                <a href="#homemade-henna" class="nav-link">Homemade Henna</a>
+                <a href="#homemade-henna" class="nav-link">Organic Henna</a>
                 <a href="#gallery" class="nav-link">Gallery</a>
-                <a href="#testimonials" class="nav-link">Testimonials</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link nav-cta-link">Book Now</a>
             </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">Meghna's Henna & Mehndi Art</h1>
-            <p class="hero-subtitle">Elegant Mehndi Designs with 100% Homemade, Natural Henna</p>
-            <p class="hero-description">Professional Henna Application Using 100% Organic Homemade Henna</p>
-            <p class="hero-location">Serving Liberty Hill, Leander, Georgetown, Round Rock, Austin & Surrounding Areas</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Book Now</a>
-                <a href="#gallery" class="btn btn-secondary">View Gallery</a>
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-inner">
+            <div class="hero-text">
+                <span class="hero-eyebrow">100% Organic Homemade Henna</span>
+                <h1 class="hero-headline">
+                    <em>Meghna's</em><br>
+                    Henna &amp; Mehndi Art
+                </h1>
+                <p class="hero-description">Elegant mehndi designs crafted with love using pure organic homemade henna. Serving Liberty Hill, Leander, Georgetown, Round Rock, Austin &amp; surrounding areas.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-gold">Book an Appointment</a>
+                    <a href="#gallery" class="btn btn-ghost">View Gallery</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-medallion">
+                    <div class="medallion-ring r1"></div>
+                    <div class="medallion-ring r2"></div>
+                    <div class="medallion-ring r3"></div>
+                    <div class="medallion-inner">
+                        <img src="images/gallery/Pic25.png" alt="Meghna's Henna Art" class="medallion-logo">
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-        </div>
+        <a href="#about" class="hero-scroll" aria-label="Scroll down">
+            <span>Scroll to explore</span>
+            <div class="scroll-line"></div>
+        </a>
     </section>
+
+    <!-- Stats Strip -->
+    <div class="stats-strip">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-leaf"></i>
+                    <div>
+                        <strong>100%</strong>
+                        <span>Organic Henna</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <strong>5-Star</strong>
+                        <span>Google Rated</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Austin Area</strong>
+                        <span>Mobile Service</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-heart"></i>
+                    <div>
+                        <strong>100+</strong>
+                        <span>Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
+                <span class="section-eyebrow">Our Story</span>
                 <h2 class="section-title">About Meghna</h2>
-                <div class="title-underline"></div>
+                <div class="title-ornament"><span></span><i class="fas fa-spa"></i><span></span></div>
             </div>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="images/gallery/Pic25.png" alt="Meghna's Henna Art Logo" class="about-logo">
+            <div class="about-grid">
+                <div class="about-image-wrap">
+                    <div class="about-img-frame">
+                        <img src="images/gallery/Pic25.png" alt="Meghna's Henna Art Logo" class="about-img">
+                    </div>
+                    <div class="about-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>100% Organic</span>
+                    </div>
                 </div>
-                <div class="about-text">
-                    <h3>Your Story, Beautifully Told Through Henna & Mehndi</h3>
-                    <p>Welcome to Meghna's Henna & Mehndi Art, where each design is a unique creation crafted with love and precision. Serving Liberty Hill, Leander, Georgetown, Round Rock, Austin and surrounding areas, I specialize in creating elegant mehndi art using my own <strong>100% organic homemade henna paste</strong> that provides a luxurious experience for every client.</p>
-                    <p>My designs are more than just beautiful patterns – they tell individual stories and celebrate special moments. Whether it's your wedding mehndi, a festive celebration, or a personal milestone, I treat each client like family. Every application uses my specially prepared organic homemade henna for the richest color and safest ingredients.</p>
-                    <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Unique Custom Designs</span>
+                <div class="about-content">
+                    <span class="section-eyebrow">Your Story, Beautifully Told</span>
+                    <h3>Henna Art That Celebrates Your Moments</h3>
+                    <p>Welcome to Meghna's Henna &amp; Mehndi Art, where each design is a unique creation crafted with love and precision. Serving Liberty Hill, Leander, Georgetown, Round Rock, Austin and surrounding areas, I specialize in creating elegant mehndi art using my own <strong>100% organic homemade henna paste</strong> for a luxurious experience.</p>
+                    <p>My designs are more than beautiful patterns — they tell individual stories and celebrate special moments. Whether it's your wedding mehndi, a festive celebration, or a personal milestone, I treat each client like family.</p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><i class="fas fa-palette"></i></div>
+                            <div><strong>Unique Custom Designs</strong><span>Every design tailored to you</span></div>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>100% Organic Homemade Henna</span>
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><i class="fas fa-leaf"></i></div>
+                            <div><strong>100% Organic Henna</strong><span>Pure natural ingredients</span></div>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Personalized Service</span>
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><i class="fas fa-heart"></i></div>
+                            <div><strong>Personalized Service</strong><span>You're treated like family</span></div>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Years of Experience</span>
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><i class="fas fa-award"></i></div>
+                            <div><strong>Skilled Artistry</strong><span>Years of dedicated practice</span></div>
                         </div>
                     </div>
                 </div>
@@ -95,60 +155,57 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
+                <span class="section-eyebrow">What We Offer</span>
                 <h2 class="section-title">Services</h2>
-                <div class="title-underline"></div>
+                <div class="title-ornament"><span></span><i class="fas fa-spa"></i><span></span></div>
                 <p class="section-subtitle">Specializing in various henna art styles for all occasions</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-ring"></i>
-                    </div>
-                    <h3>Bridal Henna & Mehndi</h3>
-                    <p>Intricate and elaborate mehndi designs for your special day. Full bridal packages including hands, arms, and feet with personalized elements using homemade henna.</p>
-                    <ul class="service-features">
-                        <li>Full hand & arm designs</li>
-                        <li>Feet & leg designs</li>
+                <div class="service-card" data-reveal>
+                    <div class="service-num">01</div>
+                    <div class="service-icon"><i class="fas fa-ring"></i></div>
+                    <h3>Bridal Henna &amp; Mehndi</h3>
+                    <p>Intricate and elaborate mehndi designs for your special day. Full bridal packages including hands, arms, and feet with personalized elements.</p>
+                    <ul class="service-list">
+                        <li>Full hand &amp; arm designs</li>
+                        <li>Feet &amp; leg designs</li>
                         <li>Custom name/date incorporation</li>
                         <li>Touch-up sessions available</li>
                     </ul>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-birthday-cake"></i>
-                    </div>
-                    <h3>Party & Events Mehndi</h3>
-                    <p>Perfect for festivals, birthdays, baby showers, and celebrations. Quick and beautiful mehndi designs for groups of any size using fresh homemade henna.</p>
-                    <ul class="service-features">
+                <div class="service-card" data-reveal>
+                    <div class="service-num">02</div>
+                    <div class="service-icon"><i class="fas fa-birthday-cake"></i></div>
+                    <h3>Party &amp; Events Mehndi</h3>
+                    <p>Perfect for festivals, birthdays, baby showers, and celebrations. Quick and beautiful mehndi designs for groups of any size.</p>
+                    <ul class="service-list">
                         <li>Festival celebrations</li>
                         <li>Birthday parties</li>
                         <li>Baby showers</li>
                         <li>Corporate events</li>
                     </ul>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-baby"></i>
-                    </div>
+                <div class="service-card" data-reveal>
+                    <div class="service-num">03</div>
+                    <div class="service-icon"><i class="fas fa-baby"></i></div>
                     <h3>Prenatal Belly Henna</h3>
                     <p>Beautiful belly mehndi art to celebrate your pregnancy journey. Safe, homemade natural henna perfect for expecting mothers.</p>
-                    <ul class="service-features">
+                    <ul class="service-list">
                         <li>Custom belly designs</li>
                         <li>Baby-themed artwork</li>
                         <li>Photo-ready designs</li>
                         <li>Comfortable sessions</li>
                     </ul>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
+                <div class="service-card" data-reveal>
+                    <div class="service-num">04</div>
+                    <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
                     <h3>Custom Mehndi Designs</h3>
-                    <p>Personalized henna and mehndi art for any occasion. Bring your ideas to life with custom patterns and motifs using premium homemade henna.</p>
-                    <ul class="service-features">
+                    <p>Personalized henna and mehndi art for any occasion. Bring your ideas to life with custom patterns and motifs.</p>
+                    <ul class="service-list">
                         <li>Personalized patterns</li>
-                        <li>Modern & traditional styles</li>
-                        <li>Name & initial designs</li>
+                        <li>Modern &amp; traditional styles</li>
+                        <li>Name &amp; initial designs</li>
                         <li>Special requests welcome</li>
                     </ul>
                 </div>
@@ -157,88 +214,66 @@
     </section>
 
     <!-- Homemade Henna Section -->
-    <section id="homemade-henna" class="homemade-henna">
+    <section id="homemade-henna" class="organic-section">
         <div class="container">
             <div class="section-header">
+                <span class="section-eyebrow">Pure &amp; Natural</span>
                 <h2 class="section-title">100% Organic Homemade Henna</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Natural, Freshly Prepared for Every Application</p>
+                <div class="title-ornament"><span></span><i class="fas fa-spa"></i><span></span></div>
+                <p class="section-subtitle">Freshly prepared for every application</p>
             </div>
-            <div class="homemade-content">
-                <div class="homemade-image">
-                    <img src="images/gallery/Pic24.jpg" alt="Meghna's homemade natural henna paste" class="henna-featured-image">
+            <div class="organic-grid">
+                <div class="organic-image">
+                    <div class="organic-img-wrap">
+                        <img src="images/gallery/Pic24.jpg" alt="Meghna's homemade natural henna paste" class="organic-img">
+                    </div>
                 </div>
-                <div class="homemade-text">
-                    <h3>Premium Organic Homemade Henna & Mehndi</h3>
-                    <p>At Meghna's Henna & Mehndi Art, I take pride in preparing my own organic henna paste from scratch using only the finest natural ingredients for all my applications. Unlike pre-made commercial henna, my homemade recipe ensures the richest, darkest stain and the safest experience for your skin.</p>
-                    
-                    <div class="henna-benefits">
+                <div class="organic-content">
+                    <p class="organic-intro">At Meghna's Henna &amp; Mehndi Art, I take pride in preparing my own organic henna paste from scratch using only the finest natural ingredients. Unlike pre-made commercial henna, my homemade recipe ensures the richest, darkest stain and the safest experience for your skin.</p>
+
+                    <div class="benefits-list">
                         <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-leaf"></i>
-                            </div>
-                            <div class="benefit-content">
+                            <div class="benefit-icon"><i class="fas fa-leaf"></i></div>
+                            <div class="benefit-text">
                                 <h4>100% Natural Organic Ingredients</h4>
-                                <p>Pure organic henna powder, essential oils, lemon juice, and natural ingredients – no chemicals or additives</p>
+                                <p>Pure organic henna powder, essential oils, lemon juice — no chemicals or additives</p>
                             </div>
                         </div>
-                        
                         <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div class="benefit-content">
+                            <div class="benefit-icon"><i class="fas fa-heart"></i></div>
+                            <div class="benefit-text">
                                 <h4>Freshly Prepared for You</h4>
-                                <p>Each batch is made fresh to ensure optimal color, consistency, and quality for every client</p>
+                                <p>Each batch made fresh to ensure optimal color, consistency, and quality</p>
                             </div>
                         </div>
-                        
                         <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-paint-brush"></i>
-                            </div>
-                            <div class="benefit-content">
+                            <div class="benefit-icon"><i class="fas fa-paint-brush"></i></div>
+                            <div class="benefit-text">
                                 <h4>Rich, Dark Stain</h4>
-                                <p>My special organic recipe creates a deep, long-lasting burgundy-brown color that develops beautifully</p>
+                                <p>My special organic recipe creates a deep, long-lasting burgundy-brown color</p>
                             </div>
                         </div>
-                        
                         <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div class="benefit-content">
+                            <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="benefit-text">
                                 <h4>Safe for All Skin Types</h4>
                                 <p>Gentle, hypoallergenic organic formula safe for sensitive skin, pregnant women, and children</p>
                             </div>
                         </div>
-                        
                         <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="benefit-content">
-                                <h4>Perfect Consistency</h4>
-                                <p>Carefully balanced texture allows for intricate, detailed designs that flow beautifully</p>
-                            </div>
-                        </div>
-                        
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-ban"></i>
-                            </div>
-                            <div class="benefit-content">
+                            <div class="benefit-icon"><i class="fas fa-ban"></i></div>
+                            <div class="benefit-text">
                                 <h4>No Black Henna</h4>
-                                <p>Never contains PPD or harmful chemicals found in "black henna" that can cause severe reactions</p>
+                                <p>Never contains PPD or harmful chemicals found in "black henna"</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="henna-quote">
+
+                    <blockquote class="organic-quote">
                         <i class="fas fa-quote-left"></i>
                         <p>"I personally prepare every batch of organic henna and mehndi paste with love and care, using a traditional recipe passed down and perfected over time. Your safety and satisfaction are my top priorities!"</p>
-                        <span>- Meghna</span>
-                    </div>
+                        <cite>— Meghna</cite>
+                    </blockquote>
                 </div>
             </div>
         </div>
@@ -248,96 +283,114 @@
     <section id="gallery" class="gallery">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Henna & Mehndi Gallery</h2>
-                <div class="title-underline"></div>
+                <span class="section-eyebrow">Our Work</span>
+                <h2 class="section-title">Henna &amp; Mehndi Gallery</h2>
+                <div class="title-ornament"><span></span><i class="fas fa-spa"></i><span></span></div>
                 <p class="section-subtitle">Browse through our stunning henna and mehndi designs</p>
             </div>
             <div class="gallery-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn active" data-filter="all">All Designs</button>
                 <button class="filter-btn" data-filter="bridal">Bridal</button>
                 <button class="filter-btn" data-filter="party">Party</button>
                 <button class="filter-btn" data-filter="prenatal">Prenatal</button>
                 <button class="filter-btn" data-filter="custom">Custom</button>
             </div>
-            <div class="gallery-grid">
-                <!-- Bridal Designs -->
+            <div class="gallery-grid" id="gallery-grid">
                 <div class="gallery-item" data-category="bridal">
-                    <img src="images/gallery/ChatGPT Image Jan 11, 2026, 01_40_34 PM.png" alt="Elegant bridal henna design with full hand and arm coverage">
-                </div>
-                <div class="gallery-item" data-category="bridal">
-                    <img src="images/gallery/ChatGPT Image Jan 11, 2026, 01_46_48 PM.png" alt="Traditional bridal mehndi with intricate patterns on both hands">
+                    <img src="images/gallery/ChatGPT Image Jan 11, 2026, 01_40_34 PM.png" alt="Elegant bridal henna design" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Bridal</span></div>
                 </div>
                 <div class="gallery-item" data-category="bridal">
-                    <img src="images/gallery/WhatsApp Image 2026-01-06 at 20.33.12.jpeg" alt="Beautiful bridal henna art with crossed hands design">
+                    <img src="images/gallery/ChatGPT Image Jan 11, 2026, 01_46_48 PM.png" alt="Traditional bridal mehndi" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Bridal</span></div>
                 </div>
                 <div class="gallery-item" data-category="bridal">
-                    <img src="images/gallery/WhatsApp Image 2026-01-06 at 20.33.13.jpeg" alt="Detailed bridal mehndi with peacock and temple motifs">
+                    <img src="images/gallery/WhatsApp Image 2026-01-06 at 20.33.12.jpeg" alt="Beautiful bridal henna art" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Bridal</span></div>
                 </div>
                 <div class="gallery-item" data-category="bridal">
-                    <img src="images/gallery/WhatsApp Image 2026-01-06 at 20.33.49.jpeg" alt="Stunning bridal henna with full arm elephant design">
+                    <img src="images/gallery/WhatsApp Image 2026-01-06 at 20.33.13.jpeg" alt="Detailed bridal mehndi" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Bridal</span></div>
                 </div>
                 <div class="gallery-item" data-category="bridal">
-                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 09.03.45.jpeg" alt="Intricate bridal design with lady portrait and temple">
+                    <img src="images/gallery/WhatsApp Image 2026-01-06 at 20.33.49.jpeg" alt="Stunning bridal henna" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Bridal</span></div>
                 </div>
                 <div class="gallery-item" data-category="bridal">
-                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 08.34.45 (1).jpeg" alt="Full bridal mehndi with elaborate arm and leg designs">
+                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 09.03.45.jpeg" alt="Intricate bridal design" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Bridal</span></div>
                 </div>
-                
-                <!-- Party/Event Designs -->
-                <div class="gallery-item" data-category="party">
-                    <img src="images/gallery/ChatGPT Image Jan 11, 2026, 02_03_50 PM.png" alt="Beautiful henna stain color on palm">
-                </div>
-                <div class="gallery-item" data-category="party">
-                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 08.30.53.jpeg" alt="Party henna design with elephant motif">
+                <div class="gallery-item" data-category="bridal">
+                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 08.34.45 (1).jpeg" alt="Full bridal mehndi" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Bridal</span></div>
                 </div>
                 <div class="gallery-item" data-category="party">
-                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 08.30.53 (1).jpeg" alt="Festival celebration henna on hand">
+                    <img src="images/gallery/ChatGPT Image Jan 11, 2026, 02_03_50 PM.png" alt="Henna stain color" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Party</span></div>
                 </div>
                 <div class="gallery-item" data-category="party">
-                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 08.30.53 (2).jpeg" alt="Event henna art with geometric patterns">
+                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 08.30.53.jpeg" alt="Party henna with elephant motif" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Party</span></div>
                 </div>
                 <div class="gallery-item" data-category="party">
-                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 08.30.54.jpeg" alt="Party mehndi design">
+                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 08.30.53 (1).jpeg" alt="Festival celebration henna" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Party</span></div>
                 </div>
                 <div class="gallery-item" data-category="party">
-                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 08.30.54 (1).jpeg" alt="Celebration henna patterns">
+                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 08.30.53 (2).jpeg" alt="Event henna art" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Party</span></div>
                 </div>
                 <div class="gallery-item" data-category="party">
-                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 2.34.49 PM.jpeg" alt="Beautiful feet henna with temple design">
+                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 08.30.54.jpeg" alt="Party mehndi design" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Party</span></div>
                 </div>
                 <div class="gallery-item" data-category="party">
-                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 2.34.49 PM (1).jpeg" alt="Party henna on feet">
+                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 08.30.54 (1).jpeg" alt="Celebration henna patterns" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Party</span></div>
                 </div>
-                
-                <!-- Prenatal Designs -->
+                <div class="gallery-item" data-category="party">
+                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 2.34.49 PM.jpeg" alt="Feet henna design" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Party</span></div>
+                </div>
+                <div class="gallery-item" data-category="party">
+                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 2.34.49 PM (1).jpeg" alt="Party henna on feet" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Party</span></div>
+                </div>
                 <div class="gallery-item" data-category="prenatal">
-                    <img src="images/gallery/WhatsApp Image 2026-01-06 at 20.33.12 (1).jpeg" alt="Prenatal belly henna art">
+                    <img src="images/gallery/WhatsApp Image 2026-01-06 at 20.33.12 (1).jpeg" alt="Prenatal belly henna" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Prenatal</span></div>
                 </div>
                 <div class="gallery-item" data-category="prenatal">
-                    <img src="images/gallery/WhatsApp Image 2026-01-06 at 20.33.12 (2).jpeg" alt="Baby-themed belly henna">
+                    <img src="images/gallery/WhatsApp Image 2026-01-06 at 20.33.12 (2).jpeg" alt="Baby-themed belly henna" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Prenatal</span></div>
                 </div>
                 <div class="gallery-item" data-category="prenatal">
-                    <img src="images/gallery/WhatsApp Image 2026-01-06 at 20.33.13 (1).jpeg" alt="Beautiful prenatal henna design">
+                    <img src="images/gallery/WhatsApp Image 2026-01-06 at 20.33.13 (1).jpeg" alt="Beautiful prenatal henna" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Prenatal</span></div>
                 </div>
                 <div class="gallery-item" data-category="prenatal">
-                    <img src="images/gallery/WhatsApp Image 2026-01-06 at 20.33.13 (2).jpeg" alt="Maternity henna art">
-                </div>
-                
-                <!-- Custom Designs -->
-                <div class="gallery-item" data-category="custom">
-                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 10.30.12.jpeg" alt="Custom personalized henna with Ganesh and peacock">
+                    <img src="images/gallery/WhatsApp Image 2026-01-06 at 20.33.13 (2).jpeg" alt="Maternity henna art" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Prenatal</span></div>
                 </div>
                 <div class="gallery-item" data-category="custom">
-                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 09.03.45 (1).jpeg" alt="Modern fusion henna design on feet with temple motif">
+                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 10.30.12.jpeg" alt="Custom Ganesh and peacock henna" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Custom</span></div>
                 </div>
                 <div class="gallery-item" data-category="custom">
-                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 09.03.45 (2).jpeg" alt="Unique custom henna art with lady portrait">
+                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 09.03.45 (1).jpeg" alt="Modern fusion henna on feet" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Custom</span></div>
                 </div>
                 <div class="gallery-item" data-category="custom">
-                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 09.03.45 (3).jpeg" alt="Creative henna patterns on hand">
+                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 09.03.45 (2).jpeg" alt="Unique custom henna art" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Custom</span></div>
                 </div>
                 <div class="gallery-item" data-category="custom">
-                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 09.03.45 (4).jpeg" alt="Artistic custom henna design">
+                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 09.03.45 (3).jpeg" alt="Creative henna patterns" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Custom</span></div>
+                </div>
+                <div class="gallery-item" data-category="custom">
+                    <img src="images/gallery/WhatsApp Image 2026-01-11 at 09.03.45 (4).jpeg" alt="Artistic custom henna" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i><span>Custom</span></div>
                 </div>
             </div>
         </div>
@@ -347,221 +400,240 @@
     <section id="testimonials" class="testimonials">
         <div class="container">
             <div class="section-header">
+                <span class="section-eyebrow">Client Love</span>
                 <h2 class="section-title">What Clients Say</h2>
-                <div class="title-underline"></div>
+                <div class="title-ornament"><span></span><i class="fas fa-spa"></i><span></span></div>
                 <p class="section-subtitle">Real reviews from our amazing clients on Google ⭐⭐⭐⭐⭐</p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"I got my bridal mehendi done by Meghna, and it turned out absolutely beautiful! The design was detailed and elegant. Everyone loved it! Highly recommend her for gorgeous bridal henna designs."</p>
-                    <div class="testimonial-author">
-                        <h4>Saritha G</h4>
-                        <span>Google Review</span>
+            <div class="testimonial-carousel">
+                <button class="carousel-btn carousel-prev" id="testimonial-prev" aria-label="Previous review">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testimonial-track-wrap">
+                    <div class="testimonial-track" id="testimonial-track">
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote-mark">"</div>
+                            <p class="testimonial-text">I got my bridal mehendi done by Meghna, and it turned out absolutely beautiful! The design was detailed and elegant. Everyone loved it! Highly recommend her for gorgeous bridal henna designs.</p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-author">
+                                    <h4>Saritha G</h4>
+                                    <span>Google Review</span>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote-mark">"</div>
+                            <p class="testimonial-text">Meghna has so much patience and interest to put the designs and she gets very involved and does her very best work every single time! She's super creative and loved her art work! Definitely and highly recommend!</p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-author">
+                                    <h4>Swetha M</h4>
+                                    <span>Google Review</span>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote-mark">"</div>
+                            <p class="testimonial-text">Meghna did my mehendi for my seemantham, and I absolutely loved it! The designs were beautiful, detailed, and done with so much care. Highly recommend her for any occasion! 💕</p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-author">
+                                    <h4>Theju B</h4>
+                                    <span>Google Review</span>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote-mark">"</div>
+                            <p class="testimonial-text">Very professional and pretty designs meghana…thank you so much for the awesome henna tattoo and can't wait to see you soon again. Lucky to have found you! 🥰</p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-author">
+                                    <h4>Shruthi K</h4>
+                                    <span>Google Review</span>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote-mark">"</div>
+                            <p class="testimonial-text">Very professional and talented artist. The designs were intricate, and she worked with great patience. Loved the results!</p>
+                            <div class="testimonial-footer">
+                                <div class="testimonial-author">
+                                    <h4>Haritha Reddy</h4>
+                                    <span>Google Review</span>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Meghna has so much patience and interest to put the designs and she gets very involved and does her very best work every single time! She's super creative and loved her art work! Definitely and highly recommend!"</p>
-                    <div class="testimonial-author">
-                        <h4>Swetha M</h4>
-                        <span>Google Review</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Meghna did my mehendi for my seemantham, and I absolutely loved it! The designs were beautiful, detailed, and done with so much care. Highly recommend her for any occasion! 💕"</p>
-                    <div class="testimonial-author">
-                        <h4>Theju B</h4>
-                        <span>Google Review</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Very professional and pretty designs meghana…thank you so much for the awesome henna tattoo and can't wait to see you soon again. Lucky to have found you! 🥰"</p>
-                    <div class="testimonial-author">
-                        <h4>Shruthi K</h4>
-                        <span>Google Review</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Very professional and talented artist. The designs were intricate, and she worked with great patience. Loved the results!"</p>
-                    <div class="testimonial-author">
-                        <h4>Haritha Reddy</h4>
-                        <span>Google Review</span>
-                    </div>
-                </div>
+                <button class="carousel-btn carousel-next" id="testimonial-next" aria-label="Next review">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
+            <div class="carousel-dots" id="carousel-dots"></div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Ready to book your henna appointment? Let's create something beautiful together!</p>
+        <div class="contact-split">
+            <div class="contact-info-panel">
+                <span class="section-eyebrow light">Let's Connect</span>
+                <h2>Book Your<br><em>Henna Session</em></h2>
+                <p>Ready to create something beautiful? Reach out and let's celebrate your special moment together.</p>
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <strong>Service Area</strong>
+                            <span>Liberty Hill, Leander, Georgetown,<br>Round Rock, Austin &amp; Surrounding Areas</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <strong>Phone</strong>
+                            <a href="tel:+15129314998">(512) 931-4998</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:meghnahennaart@gmail.com">meghnahennaart@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-social">
+                    <a href="https://www.instagram.com/meghnas_henna_arts/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/15129314998" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+            <div class="contact-form-panel">
+                <form id="contact-form" class="contact-form" action="https://formsubmit.co/meghnahennaart@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Henna Art Inquiry from Website!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <h3>Send a Message</h3>
+                    <div class="form-field">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Priya Sharma" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="priya@email.com" required>
                         </div>
-                        <div class="contact-details">
-                            <h3>Service Area</h3>
-                            <p>Liberty Hill, Leander, Georgetown, Round Rock, Austin & Surrounding Areas</p>
+                        <div class="form-field">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(512) 000-0000" required>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Phone</h3>
-                            <p><a href="tel:+15129314998">(512) 931-4998</a></p>
-                        </div>
+                    <div class="form-field">
+                        <label for="service">Service Type</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service...</option>
+                            <option value="bridal">Bridal Henna &amp; Mehndi</option>
+                            <option value="party">Party &amp; Events</option>
+                            <option value="prenatal">Prenatal Belly Henna</option>
+                            <option value="custom">Custom Design</option>
+                        </select>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p><a href="mailto:meghnahennaart@gmail.com">meghnahennaart@gmail.com</a></p>
-                        </div>
+                    <div class="form-field">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell me about your event, preferred date, and any design ideas..." required></textarea>
                     </div>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/meghnas_henna_arts/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://wa.me/15129314998" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="contact-form-container">
-                    <form id="contact-form" class="contact-form" action="https://formsubmit.co/meghnahennaart@gmail.com" method="POST">
-                        <!-- FormSubmit Configuration -->
-                        <input type="hidden" name="_subject" value="New Henna Art Inquiry from Website!">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-                        
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" required>
-                            <label for="name">Your Name</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" required>
-                            <label for="email">Your Email</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone" required>
-                            <label for="phone">Your Phone</label>
-                        </div>
-                        <div class="form-group">
-                            <select id="service" name="service" required>
-                                <option value="">Select Service</option>
-                                <option value="bridal">Bridal Henna</option>
-                                <option value="party">Party & Events</option>
-                                <option value="prenatal">Prenatal Henna</option>
-                                <option value="custom">Custom Design</option>
-                            </select>
-                            <label for="service">Service Type</label>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="4" required></textarea>
-                            <label for="message">Your Message</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                    <button type="submit" class="btn btn-gold btn-full">Send Message <i class="fas fa-paper-plane"></i></button>
                     <div id="form-message" class="form-message"></div>
-                </div>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Meghna's Henna & Mehndi Art</h3>
-                    <p>Creating elegant henna and mehndi designs that tell your unique story using 100% organic homemade henna. Serving Liberty Hill, Leander, Georgetown, Round Rock, Austin and surrounding areas.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#homemade-henna">Homemade Henna</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#services">Bridal Mehndi</a></li>
-                        <li><a href="#services">Party & Events</a></li>
-                        <li><a href="#services">Prenatal Henna</a></li>
-                        <li><a href="#services">Custom Designs</a></li>
-                        <li><a href="#homemade-henna">Organic Homemade Henna</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/gallery/Pic25.png" alt="Meghna's Henna Art" class="footer-logo">
+                    <h3>Meghna's Henna &amp; Mehndi Art</h3>
+                    <p>Creating elegant henna and mehndi designs that tell your unique story using 100% organic homemade henna. Serving Austin &amp; surrounding areas in Texas.</p>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/meghnas_henna_arts/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://wa.me/15129314998" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#homemade-henna">Organic Henna</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Bridal Mehndi</a></li>
+                        <li><a href="#services">Party &amp; Events</a></li>
+                        <li><a href="#services">Prenatal Henna</a></li>
+                        <li><a href="#services">Custom Designs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+15129314998">(512) 931-4998</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:meghnahennaart@gmail.com">meghnahennaart@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Austin, Texas &amp; Surrounding Areas</p>
+                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Meghna's Henna Art. All rights reserved.</p>
+                <p>&copy; 2025 Meghna's Henna &amp; Mehndi Art. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/15129314998" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top -->
     <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Gallery Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+        <div class="lightbox-dialog">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Close"><i class="fas fa-times"></i></button>
+            <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <img src="" alt="" class="lightbox-img" id="lightbox-img">
+            <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
-
