@@ -807,7 +807,6 @@ section { padding: 110px 0; }
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     width: 100%;
-    min-height: 200px;
 }
 
 .gallery-item {
@@ -818,7 +817,6 @@ section { padding: 110px 0; }
     min-height: 200px;
     background: var(--clr-border);
     cursor: pointer;
-    border: 2px solid var(--clr-primary);
 }
 .gallery-item img {
     width: 100%; height: 100%;
@@ -1409,12 +1407,12 @@ section { padding: 110px 0; }
     .testimonial-carousel { gap: 10px; }
     .carousel-btn { width: 40px; height: 40px; font-size: 0.8rem; }
 
-    .gallery-grid { width: 100%; }
+    .gallery-grid { width: 100%; grid-template-columns: repeat(2, 1fr) !important; gap: 16px; }
     .gallery-item { min-height: 240px; }
 }
 
 @media (max-width: 480px) {
-    .gallery-grid { grid-template-columns: 1fr; width: 100%; }
+    .gallery-grid { grid-template-columns: 1fr !important; width: 100%; gap: 12px; }
     .gallery-item { min-height: 280px; }
     .hero-cta { flex-direction: column; }
     .hero-cta .btn { width: 100%; justify-content: center; }
