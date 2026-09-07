@@ -806,6 +806,7 @@ section { padding: 110px 0; }
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
+    width: 100%;
 }
 
 .gallery-item {
@@ -813,6 +814,7 @@ section { padding: 110px 0; }
     overflow: hidden;
     border-radius: var(--radius);
     aspect-ratio: 1;
+    min-height: 200px;
     background: var(--clr-border);
     cursor: pointer;
 }
