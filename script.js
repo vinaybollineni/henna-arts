@@ -91,9 +91,15 @@ filterBtns.forEach(btn => {
 });
 
 // Initialize gallery on page load - show all items by default
-document.addEventListener('DOMContentLoaded', () => {
+// Use requestAnimationFrame to ensure DOM is fully ready
+requestAnimationFrame(() => {
     const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
-    if (allBtn) allBtn.click();
+    if (allBtn) {
+        // Trigger the click to show all items
+        allBtn.click();
+    } else {
+        console.warn('Gallery filter button not found');
+    }
 });
 
 // === GALLERY LIGHTBOX ===
@@ -109,7 +115,7 @@ let visibleItems = [];
 let currentLightboxIndex = 0;
 
 function openLightbox(index) {
-    visibleItems = Array.from(galleryItems).filter(el => !el.classList.contains('hidden'));
+    visibleItems = Array.from(getGalleryItems()).filter(el => !el.classList.contains('hidden'));
     currentLightboxIndex = index;
     showLightboxImage(currentLightboxIndex);
     lightbox.classList.add('open');
@@ -135,7 +141,7 @@ function closeLightbox() {
 }
 
 // Set up lightbox click handlers for gallery items
-document.addEventListener('DOMContentLoaded', () => {
+requestAnimationFrame(() => {
     getGalleryItems().forEach((item, i) => {
         item.addEventListener('click', () => {
             visibleItems = Array.from(getGalleryItems()).filter(el => !el.classList.contains('hidden'));
