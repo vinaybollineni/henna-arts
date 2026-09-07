@@ -94,6 +94,20 @@ filterBtns.forEach(btn => {
 // Use DOMContentLoaded for more reliable timing
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
+        // Set responsive gallery grid layout based on viewport width
+        const galleryGrid = document.getElementById('gallery-grid');
+        const viewportWidth = window.innerWidth;
+
+        if (viewportWidth <= 480) {
+            galleryGrid.style.gridTemplateColumns = '1fr';
+        } else if (viewportWidth <= 768) {
+            galleryGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
+        } else if (viewportWidth <= 1100) {
+            galleryGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
+        } else {
+            galleryGrid.style.gridTemplateColumns = 'repeat(4, 1fr)';
+        }
+
         const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
         const galleryItems = getGalleryItems();
         console.log('Gallery init - filter btn found:', !!allBtn);
