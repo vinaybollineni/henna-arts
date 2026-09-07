@@ -86,10 +86,8 @@ filterBtns.forEach(btn => {
 });
 
 // Initialize gallery on page load - show all items by default
-document.addEventListener('DOMContentLoaded', () => {
-    const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
-    if (allBtn) allBtn.click();
-});
+const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+if (allBtn) allBtn.click();
 
 // === GALLERY LIGHTBOX ===
 const lightbox = document.getElementById('lightbox');
