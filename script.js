@@ -109,7 +109,8 @@ function openLightbox(index) {
 function showLightboxImage(index) {
     const item = visibleItems[index];
     const img = item.querySelector('img');
-    lightboxImg.src = img.src;
+    // Use full-size image from data-full attribute, fall back to src if not present
+    lightboxImg.src = img.dataset.full || img.src;
     lightboxImg.alt = img.alt;
     lightboxCaption.textContent = item.querySelector('.gallery-overlay span')?.textContent || '';
     lightboxImg.style.opacity = '0';
