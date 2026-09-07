@@ -1400,10 +1400,14 @@ section { padding: 110px 0; }
 
     .testimonial-carousel { gap: 10px; }
     .carousel-btn { width: 40px; height: 40px; font-size: 0.8rem; }
+
+    .gallery-grid { width: 100%; }
+    .gallery-item { min-height: 240px; }
 }
 
 @media (max-width: 480px) {
-    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; width: 100%; }
+    .gallery-item { min-height: 280px; }
     .hero-cta { flex-direction: column; }
     .hero-cta .btn { width: 100%; justify-content: center; }
     .contact-info-panel { padding: 50px 24px; }
