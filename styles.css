@@ -853,7 +853,13 @@ section { padding: 110px 0; }
 .gallery-item:hover .gallery-overlay i,
 .gallery-item:hover .gallery-overlay span { transform: translateY(0); }
 
-.gallery-item.hidden { display: none; }
+.gallery-item {
+    display: block !important;
+}
+
+.gallery-item.hidden {
+    display: none !important;
+}
 
 /* === TESTIMONIALS === */
 .testimonials {
