@@ -85,6 +85,12 @@ filterBtns.forEach(btn => {
     });
 });
 
+// Initialize gallery on page load - show all items by default
+document.addEventListener('DOMContentLoaded', () => {
+    const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+    if (allBtn) allBtn.click();
+});
+
 // === GALLERY LIGHTBOX ===
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
