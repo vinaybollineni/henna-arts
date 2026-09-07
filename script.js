@@ -91,22 +91,24 @@ filterBtns.forEach(btn => {
 });
 
 // Initialize gallery on page load - show all items by default
-// Use requestAnimationFrame to ensure DOM is fully ready
-requestAnimationFrame(() => {
+// Use setTimeout to ensure DOM is fully parsed and rendered
+setTimeout(() => {
     const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+    const galleryItems = getGalleryItems();
     console.log('Gallery init - filter btn found:', !!allBtn);
-    console.log('Gallery items count:', getGalleryItems().length);
+    console.log('Gallery items count:', galleryItems.length);
 
+    // Always ensure all items are visible by default
+    galleryItems.forEach(item => item.classList.remove('hidden'));
+
+    // Then click the all button to apply filter styling
     if (allBtn) {
-        // Trigger the click to show all items
         allBtn.click();
         console.log('Gallery filter "all" clicked');
     } else {
-        // Fallback: show all items manually if button not found
-        console.warn('Gallery filter button not found - showing all items manually');
-        getGalleryItems().forEach(item => item.classList.remove('hidden'));
+        console.warn('Gallery filter button not found');
     }
-});
+}, 0);
 
 // === GALLERY LIGHTBOX ===
 const lightbox = document.getElementById('lightbox');
@@ -147,15 +149,15 @@ function closeLightbox() {
 }
 
 // Set up lightbox click handlers for gallery items
-requestAnimationFrame(() => {
-    getGalleryItems().forEach((item, i) => {
+setTimeout(() => {
+    getGalleryItems().forEach((item) => {
         item.addEventListener('click', () => {
             visibleItems = Array.from(getGalleryItems()).filter(el => !el.classList.contains('hidden'));
             const visibleIndex = visibleItems.indexOf(item);
             if (visibleIndex !== -1) openLightbox(visibleIndex);
         });
     });
-});
+}, 10);
 
 lightboxClose.addEventListener('click', closeLightbox);
 lightboxBackdrop.addEventListener('click', closeLightbox);
