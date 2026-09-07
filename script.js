@@ -71,14 +71,19 @@ scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior:
 
 // === GALLERY FILTER ===
 const filterBtns = document.querySelectorAll('.filter-btn');
-const galleryItems = document.querySelectorAll('.gallery-item');
+
+// Helper function to get gallery items fresh
+function getGalleryItems() {
+    return document.querySelectorAll('.gallery-item');
+}
 
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         const filter = btn.dataset.filter;
-        galleryItems.forEach(item => {
+        // Query gallery items fresh each time (not at script load time)
+        getGalleryItems().forEach(item => {
             const show = filter === 'all' || item.dataset.category === filter;
             item.classList.toggle('hidden', !show);
         });
@@ -86,8 +91,10 @@ filterBtns.forEach(btn => {
 });
 
 // Initialize gallery on page load - show all items by default
-const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
-if (allBtn) allBtn.click();
+document.addEventListener('DOMContentLoaded', () => {
+    const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+    if (allBtn) allBtn.click();
+});
 
 // === GALLERY LIGHTBOX ===
 const lightbox = document.getElementById('lightbox');
@@ -127,11 +134,14 @@ function closeLightbox() {
     document.body.style.overflow = '';
 }
 
-galleryItems.forEach((item, i) => {
-    item.addEventListener('click', () => {
-        visibleItems = Array.from(galleryItems).filter(el => !el.classList.contains('hidden'));
-        const visibleIndex = visibleItems.indexOf(item);
-        if (visibleIndex !== -1) openLightbox(visibleIndex);
+// Set up lightbox click handlers for gallery items
+document.addEventListener('DOMContentLoaded', () => {
+    getGalleryItems().forEach((item, i) => {
+        item.addEventListener('click', () => {
+            visibleItems = Array.from(getGalleryItems()).filter(el => !el.classList.contains('hidden'));
+            const visibleIndex = visibleItems.indexOf(item);
+            if (visibleIndex !== -1) openLightbox(visibleIndex);
+        });
     });
 });
 
