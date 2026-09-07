@@ -94,11 +94,17 @@ filterBtns.forEach(btn => {
 // Use requestAnimationFrame to ensure DOM is fully ready
 requestAnimationFrame(() => {
     const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+    console.log('Gallery init - filter btn found:', !!allBtn);
+    console.log('Gallery items count:', getGalleryItems().length);
+
     if (allBtn) {
         // Trigger the click to show all items
         allBtn.click();
+        console.log('Gallery filter "all" clicked');
     } else {
-        console.warn('Gallery filter button not found');
+        // Fallback: show all items manually if button not found
+        console.warn('Gallery filter button not found - showing all items manually');
+        getGalleryItems().forEach(item => item.classList.remove('hidden'));
     }
 });
 
